@@ -36,6 +36,7 @@
 									<th data-field="UserVisBueno" >USUARIO</th>
 									<th data-field="VistoBueno">VO-BO</th>
 
+
 						    </tr>
 						    </thead>
 					    	</table>
