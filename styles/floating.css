@@ -1,0 +1,94 @@
+
+.float-label-control { position: relative }
+    .float-label-control ::-webkit-input-placeholder { color:  #f39c12; }
+    .float-label-control :-moz-placeholder { color:  #f39c12; }
+    .float-label-control ::-moz-placeholder { color:  #f39c12; }
+    .float-label-control :-ms-input-placeholder { color:  #f39c12; }
+    .float-label-control input:-webkit-autofill,
+    .float-label-control textarea:-webkit-autofill { background-color:  #2c3e50 !important; -webkit-box-shadow: 0 0 0 1000px white inset !important; -moz-box-shadow: 0 0 0 1000px white inset !important; box-shadow: 0 0 0 1000px white inset !important; }
+    .float-label-control input, .float-label-control textarea, .float-label-control label { font-size: 1.2em; box-shadow: none; -webkit-box-shadow: none; }
+        .float-label-control input:focus,
+        .float-label-control textarea:focus { box-shadow: none; -webkit-box-shadow: none; border-bottom-width: 2px; padding-bottom: 0; }
+        .float-label-control textarea:focus { padding-bottom: 4px; }
+    .float-label-control input, .float-label-control textarea { display: block; width: 100%; padding: 0.1em 0em 1px 0em; border: none; border-radius: 0px; border-bottom: 1px solid #aaa; outline: none; margin: 0px; background: none; }
+    .float-label-control textarea { padding: 0.1em 0em 5px 0em; }
+    .float-label-control label { position: absolute; font-weight: normal; top: -1.0em; left: 0.08em; color: #2c3e50; z-index: -1; font-size: 0.85em; -moz-animation: float-labels 300ms none ease-out; -webkit-animation: float-labels 300ms none ease-out; -o-animation: float-labels 300ms none ease-out; -ms-animation: float-labels 300ms none ease-out; -khtml-animation: float-labels 300ms none ease-out; animation: float-labels 300ms none ease-out; /* There is a bug sometimes pausing the animation. This avoids that.*/ animation-play-state: running !important; -webkit-animation-play-state: running !important; }
+    .float-label-control input.empty + label,
+    .float-label-control textarea.empty + label { top: 0.1em; font-size: 1.5em; animation: none; -webkit-animation: none; }
+    .float-label-control input:not(.empty) + label,
+    .float-label-control textarea:not(.empty) + label { z-index: 1; }
+    .float-label-control input:not(.empty):focus + label,
+    .float-label-control textarea:not(.empty):focus + label { color: #2c3e50; }
+    .float-label-control.label-bottom label { -moz-animation: float-labels-bottom 300ms none ease-out; -webkit-animation: float-labels-bottom 300ms none ease-out; -o-animation: float-labels-bottom 300ms none ease-out; -ms-animation: float-labels-bottom 300ms none ease-out; -khtml-animation: float-labels-bottom 300ms none ease-out; animation: float-labels-bottom 300ms none ease-out; }
+    .float-label-control.label-bottom input:not(.empty) + label,
+    .float-label-control.label-bottom textarea:not(.empty) + label { top: 3em; }
+
+
+@keyframes float-labels {
+    0% { opacity: 1; color: #904; top: 0.1em; font-size: 1.5em; }
+    20% { font-size: 1.5em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.85em; }
+    100% { top: -1em; opacity: 1; }
+}
+
+@-webkit-keyframes float-labels {
+    0% { opacity: 1; color: #904; top: 0.1em; font-size: 0.5em; }
+    20% { font-size: 1.5em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.85em; }
+    100% { top: -1em; opacity: 1; }
+}
+
+@keyframes float-labels-bottom {
+    0% { opacity: 1; color: #904; top: 0.1em; font-size: 1.5em; }
+    20% { font-size: 1.5em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.85em; }
+    100% { top: 3em; opacity: 1; }
+}
+
+@-webkit-keyframes float-labels-bottom {
+    0% { opacity: 1; color: #904; top: 0.1em; font-size: 1.5em; }
+    20% { font-size: 1.5em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.85em; }
+    100% { top: 3em; opacity: 1; }
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: 550px;
+    display: inline;
+}
+
+div[ng-app] { margin: 10px; }
+.table {width: 100% }
+form[editable-form] > div {margin: 10px 0;}
+
+.retry-again {
+    color: #e74c3c;
+}
+
+.text-descripciones {
+    color: #E01931;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.text-errors {
+    color: #904;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.panel-requisiciones .heigth {
+    background:  #60646D;
+    border-color:  #CF000F;
+}
+
+data {
+    font-size: 10pt;
+    font-weight: bold;
+    color : #CF000F;
+}

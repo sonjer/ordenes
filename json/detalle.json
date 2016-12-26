@@ -1,0 +1,15 @@
+[
+     
+        {
+
+            "Ccostos": "Ccostos",
+            "factura": "factura",
+            "fecha": "fecha",
+            "proveedor": "proveedor",
+            "descripcion": "descripcion",
+            "importe":"importe",
+            "iva": "iva",
+            "Total" : "Total"
+    
+        }
+]

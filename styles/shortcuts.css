@@ -1,0 +1,187 @@
+.buttons{
+padding: 40px 0;
+}
+.nb-btn-circle {
+text-decoration: none;
+outline: none!important;
+position: relative;
+display: inline-block;
+height: 80px;
+width: 80px;
+margin: 0 10px 10px 0;
+color: #555;
+border: 1px solid #ddd;
+background-color: #fff;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+transition:all 0.4s ease-in-out;
+}
+.nb-btn-circle:hover{
+background: #00BCD4;
+border-color: #00BCD4;
+color: #fff;
+}
+.nb-btn-circle:focus{
+color: #00BCD4;
+}
+.nb-btn-circle .fa {
+float: left;
+height: 24px;
+width: 100%;
+margin: 18px 0 2px 0;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+}
+.nb-btn-circle p{
+float: left;
+width: 100%;
+margin: 0;
+font-size: 11px;
+text-align: center;
+}
+.nb-btn-circle .indicator-dot {
+position: absolute;
+top: 0px;
+right: 0px;
+height: 16px;
+width: 16px;
+font-size: 10px;
+font-weight: bold;
+text-align: center;
+line-height: 14px;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+-khtml-border-radius: 50%;
+-moz-border-radius: 50%;
+color: #fff;
+background-color: #D9534F;
+background-image: none;
+}
+
+.box-stats .kpi-content {
+	width:100%;
+	position:relative;
+	padding-left:40px;
+	float:center
+}
+.box-stats .kpi-content i {
+	position:absolute;
+	top:0;
+	font-size:26px;
+	text-align:center;
+	color:#fff;
+	line-height:26px;
+	left:0;
+	-webkit-border-radius:3px;
+	border-radius:3px
+}
+.box-stats .kpi-content .title {
+	display:block;
+	color:#666
+}
+.box-stats .kpi-content .subtitle {
+	display:block;
+	text-transform:uppercase;
+	color:#aaa
+}
+.box-stats .kpi-content .value {
+	display:block;
+	clear:both;
+	font-size:1.5em;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden
+}
+.box-stats:hover {
+	text-decoration:none
+}
+.color1 i,.color1 .boxchart-overlay {
+	color:#2BA8E3 !important
+}
+.color1 .value {
+	color:#2BA8E3
+}
+.color2 i,.color2 .boxchart-overlay {
+	color:#FF5450 !important
+}
+.color2 .value {
+	color:#FF5450
+}
+.color3 i,.color3 .boxchart-overlay {
+	color:#9E5BA1 !important
+}
+.color3 .value {
+	color:#9E5BA1
+}
+.color4 i,.color4 .boxchart-overlay {
+	color:#95CC6B !important
+}
+.color4 .value {
+	color:#95CC6B
+}
+.data_chart rect {
+	fill:#fff
+}
+.data_chart path {
+	stroke:#fff;
+	stroke-width:2;
+	fill:none
+}
+.data_chart line {
+	stroke:#000
+}
+.data_chart .area {
+	fill:rgba(255,255,255,0.3);
+	stroke-width:0
+}
+.switch a,.switch-light span span {
+	display:none
+}
+
+@media (max-width: 991px)
+{
+    .form-group .col-sm-12:first-child{margin-bottom:15px;}
+}
+
+
+.site-stats {
+	margin: 0;
+	padding: 0; text-align:center;
+	list-style: none;
+}
+.site-stats li {
+	cursor: pointer; display:inline-block;
+	margin: 0 5px 10px; text-align:center; width:42%;
+	padding:10px 0; color:#fff;
+	position: relative;
+}
+.site-stats li i{ font-size:24px; clear:both}
+.site-stats li:hover { background:#95CC6B;
+}
+
+.site-stats li i {
+	vertical-align: baseline;
+}
+.site-stats li strong {
+	font-weight: bold;
+	font-size: 20px; width:100%; float:left;
+	margin-left:0px;
+}
+.site-stats li small {
+	margin-left:0px;
+	font-size: 11px;
+	width:100%; float:left;
+}
+.negrita {
+  font-weight: bold;
+}
+/* STATUS EN TABLA */
+.COLOCADA {
+    color : red;
+    font-weight: bold;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Table Examples</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-table/src/bootstrap-table.css">
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Tabla 1</h1><code>Basico</code>
+<table data-toggle="table" data-url="http://localhost/data/data1/demo.json" data-row-style="rowStyle"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true">
+  <thead>
+    <tr>
+      <th data-field="name">Name</th>
+      <th data-field="stargazers_count">Stars</th>
+      <th data-field="forks_count">Forks</th>
+      <th data-field="description">Description</th>
+    </tr>
+  </thead>
+</table>
+</div>
+
+<div class="container">
+<h1>Tabla 2</h1><code>Seleccion</code>
+<table id="table2">
+  <thead>
+    <tr>
+        <th data-field="name" data-formatter="commonFormatter" data-events="commonEvents">Name</th>
+        <th data-field="stargazers_count" data-formatter="commonFormatter" data-events="commonEvents">Stars</th>
+        <th data-field="forks_count" data-formatter="commonFormatter" data-events="commonEvents">Forks</th>
+        <th data-field="description" data-formatter="commonFormatter" data-events="commonEvents">Description</th>
+    </tr>
+  </thead>
+</table>
+</div>
+
+<div class="container">
+<h1>Tabla 3</h1><code>Clase en fila</code>
+    <table id="lst_art_adm" data-toggle="table" data-striped="true" data-mobile-responsive="true">
+        <thead>
+            <tr>
+                <th data-sortable="true">ID</th>
+                <th>Titre</th>
+                <th>Sujet</th>
+                <th>Fonctions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>14</td>
+                <td align="left" width="80%">Un autre article <i>(archive)</i>
+
+                </td>
+                <td>NPDS<a href="index.php?op=newtopic&amp;topic=1" class="tooltip">NPDS</a>
+                </td>
+                <td>NA</td>
+                <tr>
+                    <td>13</td>
+                    <td align="left" width="80%"><a data-toggle="popover" data-trigger="hover" href="article.php?sid=13" data-content="5COMENTARIOS" title="Comentarios" data-html="true" class="">test article</a>
+                    </td>                    
+                    <td>Modules<a href="index.php?op=newtopic&amp;topic=2" data-toggle="tooltip" title="Ver detalles">Go</a>
+                    </td>
+                    <td>NA</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+
+<script>
+var data = [
+    {
+        "name": "bootstrap-table",
+        "stargazers_count": "526",
+        "forks_count": "122",
+        "description": "An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features. (supports twitter bootstrap v2 and v3) "
+    },
+    {
+        "name": "multiple-select",
+        "stargazers_count": "288",
+        "forks_count": "150",
+        "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+    },
+    {
+        "name": "bootstrap-show-password",
+        "stargazers_count": "32",
+        "forks_count": "11",
+        "description": "Show/hide password plugin for twitter bootstrap."
+    },
+    {
+        "name": "blog",
+        "stargazers_count": "13",
+        "forks_count": "4",
+        "description": "my blog"
+    },
+    {
+        "name": "scutech-redmine",
+        "stargazers_count": "6",
+        "forks_count": "3",
+        "description": "Redmine notification tools for chrome extension."
+    }
+];
+
+$(function () {
+    $('#table2').bootstrapTable({
+        data: data
+    });
+});
+
+function rowStyle(row, index) {
+    var classes = ['active', 'success', 'info', 'warning', 'danger'];
+    
+    if (index % 2 === 0 && index / 2 < classes.length) {
+        return {
+            classes: classes[index / 2]
+        };
+    }
+    return {};
+}
+
+function commonFormatter(value) {
+	return '<div data-field="' + this.field + '">' + value + '</div>';
+}
+
+window.commonEvents = {
+	'click div': function (e) {
+        alert('You click field: ' + $(e.target).attr('data-field'));
+    }
+}
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();  
+    $('#lst_art_adm').on('all.bs.table', function (e, name, args) {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();  
+    });
+});
+</script>
+
+</body>
+</html>
