@@ -25,12 +25,12 @@
 
              <div class="panel-body">
 					  	<table  id="table2"
-							 ng-init="loadData()"
-							 data-height="430"
-							 data-detail-view="true"
-               data-detail-formatter="detailFormatter"
-							 data-click-to-select="true"
-							 data-search="true">
+								 ng-init="loadData()"
+								 data-height="430"
+								 data-detail-view="true"
+	               data-detail-formatter="detailFormatter"
+								 data-click-to-select="true"
+								 data-search="true">
 						  <thead>
 						    <tr>
 
@@ -80,7 +80,6 @@
 	}
 
 	</script>
-
 	<script>
 		function detailFormatter(index, row) {
 				var html = [];

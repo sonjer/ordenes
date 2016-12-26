@@ -24,8 +24,14 @@
 					<h4 align="center">ORDENES AUTORIZADAS</h4>
 
              <div class="panel-body">
-					  	<table  id="table2" ng-init="loadData()"data-height="430" data-detail-view="true"
-               data-detail-formatter="detailFormatter"  data-click-to-select="true"data-search="true">
+					  	<table
+                  id="table2"
+                  ng-init="loadData()"
+                  data-height="430" 
+                  data-detail-view="true"
+                  data-detail-formatter="detailFormatter"
+                  data-click-to-select="true"
+                  data-search="true">
 						  <thead>
 						    <tr>
 
@@ -65,7 +71,7 @@
 								});
 								console.log(checkedRows);
 							});
-					
+
 							$('#acpt').on("click",function(e,row){
 							angular.element($('#requisicionID')).scope().aprobar(row);
 							         var array = {data: checkedRows};
