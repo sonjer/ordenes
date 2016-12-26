@@ -65,7 +65,7 @@
 								});
 								console.log(checkedRows);
 							});
-							//Aqui es donde actualizas tu tabla asignale un id al botón
+					
 							$('#acpt').on("click",function(e,row){
 							angular.element($('#requisicionID')).scope().aprobar(row);
 							         var array = {data: checkedRows};
