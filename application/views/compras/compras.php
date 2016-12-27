@@ -82,6 +82,7 @@
 	</script>
 	<script>
 		function detailFormatter(index, row) {
+		
 				var html = [];
 				$.each(row, function (key, value) {
 					if(key != 'idCompra' && key != 'ClaveProv' && key != 'CveSuc'

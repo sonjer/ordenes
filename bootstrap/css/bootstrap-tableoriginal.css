@@ -1,24 +1,9 @@
- .nounderline {text-decoration: none !important; }
- .table {border-radius: 5px; border: 1px solid #7e7e7e; border-spacing:0 !important;}
- .table-bordered > thead > tr > th,
- .table-bordered > tbody > tr > th,
- .table-bordered > tfoot > tr > th,
- .table-bordered > thead > tr > td,
- .table-bordered > tbody > tr > td,
- .table-bordered > tfoot > tr > td { border: 1px solid #7e7e7e !important; }
- .detail-icon  { color : #F89406; }
- .icon-minus { color : #F89406; }
- .icon-minus:hover { color : #F89406; }
+/**
+ * @author zhixin wen <wenzhixin2010@gmail.com>
+ * version: 1.11.0
+ * https://github.com/wenzhixin/bootstrap-table/
+ */
 
- th {
- background: linear-gradient(180deg, #F89406 18%, #f8a734 44%, #F89406 77%, #F89406 100%); /* w3c */
- color :  #000000;
-}
-/*
-.Abierto { background-color: #d0ef9b !important;}
-.Critico { background-color: #ffd6d6 !important;}
-.Cerrado { background-color: #ffffc1 !important;}*/
-/*********************************************************************************/
 .bootstrap-table .table {
     margin-bottom: 0 !important;
     border-bottom: 1px solid #dddddd;
@@ -124,7 +109,7 @@
 }
 
 .fixed-table-container th.detail {
-    margin: 0 auto !important;
+    width: 30px;
 }
 
 .fixed-table-container tbody td {
