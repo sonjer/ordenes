@@ -63,7 +63,7 @@ class Ordenes_Model extends CI_Model {
 
     function autorizarbyID($idCompra){
      $this->output->enable_profiler(TRUE);
-      if($this -> db -> query("update ordenescompra SET NumUser = ". $this->user->info->ID .", statusAut = 'Autorizada', FechHoraAut = now() WHERE idCompra = ?;", $idCompra)){
+      if($this -> db -> query("update detallescompra SET NumUser = ". $this->user->info->ID .", statusAut = 'Autorizada', FechHoraAut = now() WHERE idCompra = ?;", $idCompra)){
         return 'actualizado';
       }
     }
@@ -71,7 +71,7 @@ class Ordenes_Model extends CI_Model {
 
         function VistoBuenobyID($idCompra){
          $this->output->enable_profiler(TRUE);
-          if($this -> db -> query("update ordenescompra SET UserVisBueno = ". $this->user->info->ID .", VistoBueno = 'OK' WHERE idCompra = ?;", $idCompra)){
+          if($this -> db -> query("update detallescompra SET UserVisBueno = ". $this->user->info->ID .", VistoBueno = 'OK' WHERE idCompra = ?;", $idCompra)){
             return 'actualizado';
           }
         }

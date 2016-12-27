@@ -27,7 +27,7 @@
 					  	<table
                   id="table2"
                   ng-init="loadData()"
-                  data-height="430" 
+                  data-height="430"
                   data-detail-view="true"
                   data-detail-formatter="detailFormatter"
                   data-click-to-select="true"
@@ -36,11 +36,11 @@
 						    <tr>
 
 
-									<th data-field="CveSuc">CLIENTE</th>
 									<th data-field="NoOrden">ORDEN-COMP</th>
+									<th data-field="CveSuc">CLIENTE</th>
 									<th data-field="NomProv">PROVEEDOR</th>
-									<th class="col-sm-2" data-field="TotalPed" data-formatter="formatMoney">TOTAL</th>
-									<th data-field="FalltaPed">FECHA PEDIDO</th>
+									<th class="col-sm-2" data-field="Total" data-formatter="formatMoney">TOTAL</th>
+									<th data-field="FaltaPed">FECHA PEDIDO</th>
 									<th data-field="NumUser" >USUARIO</th>
 									<th data-field="FechHoraAut">FECHA Y HORA AUT.</th>
 						    </tr>
@@ -110,6 +110,9 @@
     function detailFormatter(index, row) {
         var html = [];
         $.each(row, function (key, value) {
+						if(key != 'idCompra' && key != 'ClaveProv' && key != 'CveSuc'
+						&& key != 'FaltaPed' && key != 'NumUser' && key != 'statusAut'
+						&& key != 'FechHoraAut' && key != 'CveComp' && key != 'NoOrden' && key != 'NomProv' )
             html.push('<td><b>' + key + ':</b> ' + value + '</td>');
         });
         return html.join('');

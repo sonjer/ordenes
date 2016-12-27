@@ -34,11 +34,11 @@
 						    <tr>
 
 									<th data-field="statusAut" data-checkbox="true" data-formatter="stateFormatter"></th>
-									<th data-field="CveSuc">CLIENTE</th>
 									<th data-field="NoOrden">ORDEN-COMP</th>
+									<th data-field="CveSuc">CLIENTE</th>
 									<th data-field="NomProv">PROVEEDOR</th>
-									<th class="col-sm-2" data-field="TotalPed" data-formatter="formatMoney">TOTAL COMP.</th>
-									<th data-field="FalltaPed">FECHA PEDIDO</th>
+									<th class="col-sm-2" data-field="Total" data-formatter="formatMoney">TOTAL COMP.</th>
+									<th data-field="FaltaPed">FECHA PEDIDO</th>
 									<th data-field="UserVisBueno" >USUARIO</th>
 									<th data-field="VistoBueno">VO-BO</th>
 
@@ -85,6 +85,9 @@ function formatMoney(number, places, symbol, thousand, decimal) {
 	function detailFormatter(index, row) {
 			var html = [];
 			$.each(row, function (key, value) {
+					if(key != 'idCompra' && key != 'ClaveProv'  && key != 'UserVisBueno'  && key != 'VistoBueno'
+					&& key != 'CveSuc'  && key != 'FaltaPed' && key != 'NumUser' && key != 'statusAut' && key != 'FechHoraAut'
+					&& key != 'CveComp' && key != 'NoOrden' && key != 'NomProv' )
 					html.push('<td><b>' + key + ':</b> ' + value + '</td>');
 			});
 			return html.join('');
