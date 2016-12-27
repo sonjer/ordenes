@@ -112,7 +112,8 @@
         $.each(row, function (key, value) {
 						if(key != 'idCompra' && key != 'ClaveProv' && key != 'CveSuc'
 						&& key != 'FaltaPed' && key != 'NumUser' && key != 'statusAut'
-						&& key != 'FechHoraAut' && key != 'CveComp' && key != 'NoOrden' && key != 'NomProv' )
+						&& key != 'FechHoraAut' && key != 'CveComp' && key != 'NoOrden'
+						&& key != 'NomProv' )
             html.push('<td><b>' + key + ':</b> ' + value + '</td>');
         });
         return html.join('');
