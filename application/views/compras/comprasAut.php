@@ -53,6 +53,7 @@
 		</div>
 	<!-- FIN CONTROLLER -->
 	<script src="<?php echo base_url(); ?>bootstrap/js/ui-grid.min.js"></script>
+
 	<script>
 	$(document).ready(function(){
 					var checkedRows = new Array();
@@ -92,6 +93,7 @@
 
 							});
 	</script>
+
 	<script>
 	function formatMoney(number, places, symbol, thousand, decimal) {
 		number = number || 0;
@@ -108,14 +110,17 @@
 	</script>
 	<script>
     function detailFormatter(index, row) {
-        var html = [];
-        $.each(row, function (key, value) {
-						if(key != 'idCompra' && key != 'ClaveProv' && key != 'CveSuc'
-						&& key != 'FaltaPed' && key != 'NumUser' && key != 'statusAut'
-						&& key != 'FechHoraAut' && key != 'CveComp' && key != 'NoOrden'
-						&& key != 'NomProv' )
-            html.push('<td><b>' + key + ':</b> ' + value + '</td>');
-        });
-        return html.join('');
+			var html = [];
+			html.push('<ul class="list-group">');
+			  html.push('<li class="list-group-item">PARTIDA<span class="badge">'+ row.Partida +'</span></li>');
+				html.push('<li class="list-group-item">CLAVE PRODUCTO<span class="badge">'+ row.ClaveProd +'</span></li>');
+				html.push('<li class="list-group-item">DESCRIPCIÓN PRODUCTO<span class="badge">'+ row.DescProd +'</span></li>');
+				html.push('<li class="list-group-item">UNIDAD<span class="badge">'+ row.Unidad +'</span></li>');
+				html.push('<li class="list-group-item">CANTIDAD PRODUCTO<span class="badge">'+ row.CantProd +'</span></li>');
+			  html.push('<li class="list-group-item">IMPORTE <span class="badge">' +accounting.formatMoney(row.Importe) +'</span></li>');
+				html.push('<li class="list-group-item">IVA PROV <span class="badge">' +accounting.formatMoney(row.ivaProv) +'</span></li>');
+			  html.push('<li class="list-group-item">TOTAL <span class="badge">'+ accounting.formatMoney(row.Total) +'</span></li>');
+			html.push('</ul>');
+		return html.join('');
     }
 </script>

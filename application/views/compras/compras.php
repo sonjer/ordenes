@@ -82,15 +82,14 @@
 	</script>
 	<script>
 		function detailFormatter(index, row) {
-		
 				var html = [];
 				$.each(row, function (key, value) {
-					if(key != 'idCompra' && key != 'ClaveProv' && key != 'CveSuc'
+					if(key != 'idCompra' && key != 'StatusPart' && key != 'ClaveProv' && key != 'CveSuc'
 					&& key != 'FaltaPed' && key != 'NumUser' && key != 'statusAut'
 					&& key != 'FechHoraAut' && key != 'CveComp' && key != 'NoOrden'
 					&& key != 'NomProv' )
-						html.push('<td><b>' + key + ':</b> ' + value + '</td>');
+						html.push('<td> ' + key + ':<br>' + value + '</td>');
 				});
-				return html.join('');
+			return html.join('');
 		}
 	</script>

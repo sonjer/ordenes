@@ -9,11 +9,11 @@ $db['default'] = array(
 /*	'hostname' => 'iicom.mx',
 	'username' => 'heyzues',
 	'password' => '3631626231',
-*/	
+*/
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	
+
 	'database' => 'localicom',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
