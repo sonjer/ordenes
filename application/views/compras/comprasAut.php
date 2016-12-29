@@ -106,19 +106,31 @@
 	}
 
 	</script>
-	<script>
-    function detailFormatter(index, row) {
-			var html = [];
-			html.push('<ul class="list-group">');
-			  html.push('<li class="list-group-item">PARTIDA<span class="badge">'+ row.Partida +'</span></li>');
-				html.push('<li class="list-group-item">CLAVE PRODUCTO<span class="badge">'+ row.ClaveProd +'</span></li>');
-				html.push('<li class="list-group-item">DESCRIPCIÓN PRODUCTO<span class="badge">'+ row.DescProd +'</span></li>');
-				html.push('<li class="list-group-item">UNIDAD<span class="badge">'+ row.Unidad +'</span></li>');
-				html.push('<li class="list-group-item">CANTIDAD PRODUCTO<span class="badge">'+ row.CantProd +'</span></li>');
-			  html.push('<li class="list-group-item">IMPORTE <span class="badge">' +accounting.formatMoney(row.Importe) +'</span></li>');
-				html.push('<li class="list-group-item">IVA PROV <span class="badge">' +accounting.formatMoney(row.ivaProv) +'</span></li>');
-			  html.push('<li class="list-group-item">TOTAL <span class="badge">'+ accounting.formatMoney(row.Total) +'</span></li>');
-			html.push('</ul>');
-		return html.join('');
-    }
+<script>
+	function detailFormatter(index, row) {
+		var html = [];
+		html.push('<table = "table-stripped" style="width:100%">');
+		html.push('<tr>');
+		html.push('<th>PARTIDA</th>');
+		html.push('<th>CLAVE PRODUCTO</th>');
+		html.push('<th>DESCRIPCIÓN</th>');
+		html.push('<th>UNIDAD</th>');
+		html.push('<th>CANTIDAD</th>');
+		html.push('<th>IMPORTE</th>');
+		html.push('<th>IVA PROV </th>');
+		html.push('<th>TOTAL</th>');
+		html.push('</tr>');
+		html.push('<tr>');
+		html.push('<td>' + row.Partida +'</td>');
+		html.push('<td>' + row.ClaveProd +'</td>');
+		html.push('<td>' + row.DescProd +'</td>');
+		html.push('<td>' + row.Unidad +'</td>');
+		html.push('<td>' + row.CantProd +'</td>');
+		html.push('<td>' +accounting.formatMoney(row.Importe) +'</td>');
+		html.push('<td>' +accounting.formatMoney(row.ivaProv) +'</td>');
+		html.push('<td>' +accounting.formatMoney(row.Total) +'</td>');
+		html.push('</tr>');
+		html.push('</table>');
+	return html.join('');
+	}
 </script>
