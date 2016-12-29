@@ -18,6 +18,7 @@ class OrdenesCompra extends CI_Controller {
     }
     public function compras() {
         $this->template->loadExternal('<script type="text/javascript" src="' . base_url() . 'scripts/compras/ordenes-angular.js" /></script>'.
+                                        '	<script src="' . base_url() . 'bootstrap/js/accounting.min.js"></script>'.
                                         '<script type="text/javascript" src="' . base_url() . 'bootstrap/js/bootstrap-table.js" /></script>');
         //$data['clientes'] = $this->Ordenes_model->getClientes();
         $this->template->loadContent("compras/compras.php");
@@ -25,6 +26,7 @@ class OrdenesCompra extends CI_Controller {
 
     public function comprasVistoBueno() {
         $this->template->loadExternal('<script type="text/javascript" src="' . base_url() . 'scripts/compras/ordenesVisto-angular.js" /></script>'.
+                                         '	<script src="' . base_url() . 'bootstrap/js/accounting.min.js"></script>'.
                                         '<script type="text/javascript" src="' . base_url() . 'bootstrap/js/bootstrap-table.js" /></script>');
         //$data['clientes'] = $this->Ordenes_model->getClientes();
         $this->template->loadContent("compras/comprasVistoBueno.php");

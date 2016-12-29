@@ -34,8 +34,6 @@
                   data-search="true">
 						  <thead>
 						    <tr>
-
-
 									<th data-field="NoOrden">ORDEN-COMP</th>
 									<th data-field="CveSuc">CLIENTE</th>
 									<th data-field="NomProv">PROVEEDOR</th>
